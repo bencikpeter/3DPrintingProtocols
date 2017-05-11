@@ -3,7 +3,7 @@
 
 The system consists of two main parts: 
 
-**Android app**: Stored in a _V2_ folder as Android Studio project
+**Android app**: Stored in a _android_app_ folder as Android Studio project
 
 **Desktop middleware**: Stored in _middleware_ folder
 
