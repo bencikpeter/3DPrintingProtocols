@@ -1,0 +1,10 @@
+printServer.sh: Starting ippserver with configuration ./3Dserver
+printServer.sh: Starting ippserver with configuration ./3Dserver
+printServer.sh: Starting ippserver with configuration ./3Dserver
+printServer.sh: Starting ippserver with configuration ./3Dserver
+printServer.sh: Starting ippserver with configuration ./3Dserver
+printServer.sh: Starting ippserver with configuration ./3Dserver
+printServer.sh: Starting ippserver with configuration ./3Dserver
+printServer.sh: Starting ippserver with configuration ./3Dserver
+printServer.sh: Starting ippserver with configuration ./3Dserver
+printServer.sh: Starting ippserver with configuration ./3Dserver

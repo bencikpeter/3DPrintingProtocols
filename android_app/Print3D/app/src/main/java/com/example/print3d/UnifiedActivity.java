@@ -64,7 +64,7 @@ public class UnifiedActivity extends AppCompatActivity {
 
         listview = (ListView) findViewById(R.id.listView2);
 
-        adapter = new UnifiedActivity.PrinterListAdapter(this, android.R.layout.simple_list_item_1, printers);
+        adapter = new UnifiedActivity.PrinterListAdapter(this,R.layout.list_item, printers);
         listview.setAdapter(adapter);
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener(){
@@ -211,8 +211,6 @@ public class UnifiedActivity extends AppCompatActivity {
         Log.d(TAG, "updating UI with new printer: " + info.getName());
         printers.add(info);
         adapter.notifyDataSetChanged();
-
-        //adapter.refresh();
     }
 
     private void removeFromList(ServiceInfo info){
