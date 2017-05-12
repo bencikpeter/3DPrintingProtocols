@@ -1,5 +1,6 @@
 package com.example.print3d;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -173,11 +174,9 @@ public class UnifiedActivity extends AppCompatActivity {
 
             LayoutInflater inflater =  (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-            TextView textView =  (TextView) inflater.inflate(android.R.layout.simple_list_item_1,parent,false);
+            TextView textView =  (TextView) inflater.inflate(R.layout.list_item,parent,false);
 
             textView.setText(obj.get(position).getName());
-
-            textView.setTextColor(Color.BLACK);
 
             return textView;
         }
