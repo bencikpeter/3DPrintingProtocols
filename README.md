@@ -23,7 +23,7 @@ Import the project into android studio, build and run ;) No other dependencies r
  **Installation**:
  
  - All the files with `*.sh` extention must have executable executable permissions (execute `chmod +x fileName` )
- - An ipserver binary has to be copied to _middleware_ folder
+ - An ippserver binary has to be copied to _middleware_ folder
  
  **Configuration**:
  
