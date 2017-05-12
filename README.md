@@ -18,10 +18,12 @@ Import the project into android studio, build and run ;) No other dependencies r
  
  - [mono project](http://www.mono-project.com) - required to run LPR Sender
  - [fswatch](https://github.com/emcrisostomo/fswatch) - due to the bug in ippserver, the sripts cannot be executed automatically, fswatch utility is used to monitor the data directory of ippserver and exetute scripts
+ - [ippsample](http://istopwg.github.io/ippsample/) - ippserver utility from this bundle is used to connect to Android client
  
  **Installation**:
  
- All the files with `*.sh` extention must have executable executable permissions (execute `chmod +x fileName` )
+ - All the files with `*.sh` extention must have executable executable permissions (execute `chmod +x fileName` )
+ - An ipserver binary has to be copied to _middleware_ folder
  
  **Configuration**:
  
