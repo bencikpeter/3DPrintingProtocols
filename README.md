@@ -34,3 +34,5 @@ Import the project into android studio, build and run ;) No other dependencies r
  the desktop middleware is started by executing the `startup.sh` file. Log data are storred in a log.txt file in an active directory.
  
  Android app is used through share menu of an Android device. An android device app **has to be** started before `startup.sh` otherwise the printers will not be discovered by the app.
+ 
+ The delivering printer is *eDee*. Behavior of files sent to *DeeGreen* is undefined
