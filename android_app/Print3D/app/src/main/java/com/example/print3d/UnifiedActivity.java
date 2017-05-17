@@ -240,7 +240,7 @@ public class UnifiedActivity extends AppCompatActivity {
         String uri = null;
 
         String prefix = "ipp://";
-        String folderStructure = "/ipp/print3d/";
+        String folderStructure = "/ipp/print3d/"; //defined in standard head 6.1.
         String server = serviceInfo.getServer();
         String port = ":"+Integer.toString(serviceInfo.getPort());
         String name = serviceInfo.getName();
