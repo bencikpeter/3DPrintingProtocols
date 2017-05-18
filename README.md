@@ -24,6 +24,7 @@ Import the project into android studio, build and run ;) No other dependencies r
  
  - All the files with `*.sh` extention must have executable executable permissions (execute `chmod +x fileName` )
  - An ippserver binary has to be copied to _middleware_ folder
+ - YSoft LPR sender must be copied to the _middleware_ directory
  
  **Configuration**:
  
