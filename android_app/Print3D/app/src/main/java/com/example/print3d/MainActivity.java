@@ -80,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
         int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
         cursor.moveToFirst();
         String path= cursor.getString(column_index);
-        //cursor.close();
         return path;
     }
 
@@ -106,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
             Log.d(TAG,"one file to be printed");
             String path = fileset.iterator().next();
             String name = getFileName(path);
-            //startActionPostModel(this.getBaseContext(),path);
             startActionPrintIpp(this.getBaseContext(),path,name,"http",printerAddress,printerPort,printerUri);
         } else {
             //TODO: multiple files

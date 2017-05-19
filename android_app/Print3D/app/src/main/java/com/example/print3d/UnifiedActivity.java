@@ -141,7 +141,6 @@ public class UnifiedActivity extends AppCompatActivity {
         int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
         cursor.moveToFirst();
         String path= cursor.getString(column_index);
-        //cursor.close();
         return path;
     }
 
@@ -285,7 +284,8 @@ public class UnifiedActivity extends AppCompatActivity {
             startActionPrintIpp(this.getBaseContext(),path,name,"http",printerAddress,printerPort,printerUri);
         } else {
             //TODO: multiple files
-            Log.d(TAG, fileset.size() + " files to be printed");
+            Log.d(TAG, fileset.size() + " files to be printed - unsupported operation");
+            throw new UnsupportedOperationException("Multiple files not supported yet");
         }
     }
 }

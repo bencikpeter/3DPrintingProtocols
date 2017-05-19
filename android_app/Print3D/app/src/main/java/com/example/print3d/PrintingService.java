@@ -31,13 +31,7 @@ import javax.net.ssl.SSLSession;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
-/**
- * An {@link IntentService} subclass for handling asynchronous task requests in
- * a service on a separate handler thread.
- * <p>
- * TODO: Customize class - update intent actions, extra parameters and static
- * helper methods.
- */
+
 public class PrintingService extends IntentService {
 
     //Results form printer picker
@@ -111,12 +105,11 @@ public class PrintingService extends IntentService {
     }
 
     /**
-     * Handle action Foo in the provided background thread with the provided
+     * Handle action IppPrint in the provided background thread with the provided
      * parameters.
      */
     private void handleActionIppPrint(String filePath, String jobName, String connectionTypeString, String printerIp, int printerPort, String printerUri) {
         this.jobName = jobName;
-        //TODO: edit to conform new extras
         this.filePath = filePath;
         this.printerAddress = printerIp;
         this.printerPort = printerPort;

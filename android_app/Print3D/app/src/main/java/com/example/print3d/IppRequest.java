@@ -88,14 +88,11 @@ public class IppRequest {
         writeAttribute(URI_TAG,"printer-uri", PRINTER_URI );
         writeAttribute(NAME_WITHOUT_LANGUAGE_TAG, "job-name", jobName);
         writeAttribute(BOOLEAN_TAG, "ipp-attribute-fidelity", new byte[] {0x01});  // 1 - TRUE
-        if (/*printJobInfo.getAttributes().getColorMode() == PrintAttributes.COLOR_MODE_MONOCHROME*/ false)
-            writeAttribute(NAME_WITHOUT_LANGUAGE_TAG, "output-mode", "monochrome");
     }
 
     private void setJobAttributes() throws IOException { //job template attributes
         writeAttribute(INTEGER_TAG, "copies", new byte[] {0x00, 0x00, 0x00, 0x01});  // 1 copy (number of copies)
         writeAttribute(KEYWORD_TAG, "sides", "one-sided");
-        //writeAttribute(MULTIPLE_OBJECT_HANDLING_TAG, "multiple-object-handling","one-at-a-time");
     }
 
     private void writeAttribute(byte tag, String name, String value) throws IOException {

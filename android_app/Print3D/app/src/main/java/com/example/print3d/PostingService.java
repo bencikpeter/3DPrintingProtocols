@@ -120,8 +120,7 @@ public class PostingService extends IntentService {
     private void handleActionPostModel(String modelPath) {
         Log.i(TAG, "Path to file to be send: " + modelPath);
 
-        //File model = openFilePath(modelPath);
-        //handleConnection(model);
+
 
         jLpr jLpr = new jLpr();
         jLpr.setUseOutOfBoundPorts(true);
@@ -141,6 +140,13 @@ public class PostingService extends IntentService {
         Log.d(TAG, "file sent");
     }
 
+    private void handleActionHTTPPostModel(String modelPath) {
+
+        Log.i(TAG, "Path to file to be send: " + modelPath);
+        File model = openFilePath(modelPath);
+        handleConnection(model);
+    }
+
 
     private  void handleConnection(File model) {
         HttpURLConnection client = null;
@@ -150,6 +156,8 @@ public class PostingService extends IntentService {
             //trustAllHosts();
             //HttpsURLConnection https = (HttpsURLConnection) url.openConnection();
             //https.setHostnameVerifier(DO_NOT_VERIFY);
+            //code above was used to bypass the non-valid certificates used in testing and
+            // is left here for illustrative purposes only
             client = (HttpURLConnection) url.openConnection();
 
 
@@ -181,20 +189,10 @@ public class PostingService extends IntentService {
         if (outputStream != null && file != null) {
             Log.d(TAG,"writing to output stream");
             InputStream inputStream = new FileInputStream(file);
-            /*byte[] buf = new byte[8192];
-            int c = 0;
-            while ((c = inputStream.read(buf,0,buf.length)) > 0) {
-                Log.d(TAG,"inside loop");
-                outputStream.write(buf,0,c);
-                outputStream.flush();
-            }*/
 
-            //OutputStreamWriter wr = new OutputStreamWriter(outputStream);
-            //wr.write();
             IOUtils.copy(inputStream,outputStream);
             Log.d(TAG,"posted");
             inputStream.close();
-            //outputStream.flush();
             outputStream.close();
         }
     }

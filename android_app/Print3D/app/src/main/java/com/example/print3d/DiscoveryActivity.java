@@ -68,7 +68,6 @@ public class DiscoveryActivity extends AppCompatActivity {
         printers.add(info);
         adapter.notifyDataSetChanged();
 
-        //adapter.refresh();
     }
 
     private void removeFromList(ServiceInfo info){
@@ -83,19 +82,6 @@ public class DiscoveryActivity extends AppCompatActivity {
 
         adapter.notifyDataSetChanged();
     }
-
-    /*
-    private class ListHandler extends Handler {
-        ListHandler(Looper looper) {
-            super(looper);
-        }
-
-        @Override
-        public void handleMessage(Message msg){
-            //TODO update UI
-        }
-    }
-    */
 
     private class PrinterListAdapter extends ArrayAdapter<ServiceInfo>
     {
