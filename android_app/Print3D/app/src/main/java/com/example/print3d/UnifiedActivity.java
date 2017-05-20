@@ -40,6 +40,7 @@ import javax.jmdns.ServiceInfo;
 
 import static com.example.print3d.PrintingService.startActionPrintIpp;
 
+
 public class UnifiedActivity extends AppCompatActivity {
 
     //logging

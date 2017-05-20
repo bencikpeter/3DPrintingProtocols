@@ -16,7 +16,7 @@ import java.nio.charset.StandardCharsets;
 public class IppRequest {
 
     //hard-wired URI
-    public static final String PRINTER_URI = "ipp://peters-macbook-pro.local.:8501/ipp/print3d/foo3d";
+    public static final String PRINTER_URI = "ipp://peters-macbook-pro.local.:8501/ipp/print3d/eDee";
 
 
     // tags

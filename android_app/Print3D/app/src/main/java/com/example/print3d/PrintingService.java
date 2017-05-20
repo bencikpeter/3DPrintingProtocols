@@ -31,6 +31,9 @@ import javax.net.ssl.SSLSession;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
+/**
+ * Created by bencikpeter, inspired by ipp implementation of petr barton
+ */
 
 public class PrintingService extends IntentService {
 
@@ -69,7 +72,7 @@ public class PrintingService extends IntentService {
     }
 
     /**
-     * Starts this service to perform action Foo with the given parameters. If
+     * Starts this service to perform action printIpp with the given parameters. If
      * the service is already performing a task this action will be queued.
      *
      * @see IntentService
@@ -94,7 +97,6 @@ public class PrintingService extends IntentService {
                 final String param1 = intent.getStringExtra(FILE_PATH);
                 final String param2 = intent.getStringExtra(JOB_NAME);
                 final String param3 = intent.getStringExtra(CONNECTION_TYPE);
-                //TODO: read new extras;
                 final String param4 = intent.getStringExtra(PRINTER_ADDRES);
                 final int param5 = intent.getIntExtra(PRINTER_PORT,-1);
                 final String param6 = intent.getStringExtra(PRINTER_URI);
@@ -221,7 +223,7 @@ public class PrintingService extends IntentService {
     }
 
     /** Prepares connection according to the fact if https or http is selected
-     * @return
+     * @return prepared connection
      */
     private HttpURLConnection prepareConnection() {
         URL url;
