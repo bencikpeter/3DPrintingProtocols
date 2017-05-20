@@ -6,6 +6,7 @@ In a current implementation, the following java source files are being used:
 - `IppRequest.java`
 - `PostingService.java`
 - `UnifiedActivity.java`
+- `jLpr.java` - LPR library
 
 ## Legacy files and their pupose
 
